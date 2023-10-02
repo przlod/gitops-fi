@@ -1,5 +1,5 @@
 #doitlive speed: 5
-#doitlive promt: [{user}@demo-01]$
+#doitlive prompt: [{user}@gitops demo-01]$
 
 oc project simon01-argocd
 vim demo-01-argocd.yaml
