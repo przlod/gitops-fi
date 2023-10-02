@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: simons-project-argocd
+  namespace: simon01-argocd
+spec:
+  rbac:
+    policy: g, rbacsystem:admin, role:admin
+    scopes: '[groups]'
+  server:
+    route:
+      enabled: true
+  sso:
+    dex:
+      openShiftOAuth: true
+    provider: dex
