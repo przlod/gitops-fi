@@ -6,3 +6,6 @@ oc delete project simon01-project
 oc delete argocd simons-project-argocd -n simon01-argocd
 
 oc project simon01-argocd
+
+oc delete application --all -n openshift-gitops
+oc delete application --all -n openshift-gitops
