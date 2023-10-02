@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoenv-deployment
+  labels:
+    app: echoenv
+spec:
+  selector:
+    matchLabels:
+      app: echoenv
+  template:
+    metadata:
+      labels:
+        app: echoenv
+    spec:
+      containers:
+        - name: echoenv-container
+          image: quay.io/simonkrenger/echoenv:latest
+          ports:
+            - containerPort: 8080
