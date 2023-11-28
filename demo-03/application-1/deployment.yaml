@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: echoenv
+  name: application-1-echoenv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echoenv
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: echoenv
+    spec:
+      containers:
+      - image: quay.io/simonkrenger/echoenv:latest
+        name: echoenv
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+
