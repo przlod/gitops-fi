@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: registry.redhat.io/ubi9/nginx-124@sha256:8870b07b39166e44325116bde4f3701e8fbd5cd328e0e719310529b8e7e122e2
+          #          image: registry.redhat.io/ubi9/nginx-124@sha256:8870b07b39166e44325116bde4f3701e8fbd5cd328e0e719310529b8e7e122e2
+          image: image-registry.openshift-image-registry.svc:5000/prep-image/nginx-image@sha256:027853fa162b62fa74f53fe6d6bbcae770835fe07a779470a3f16f5a45a34185
           ports:
             - containerPort: 8080
