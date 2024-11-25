@@ -1,13 +1,13 @@
 #doitlive speed: 5
 #doitlive prompt: [{user}@gitops demo-01]$
 
-oc project simon01-argocd
+oc project fitam01-argocd
 vim demo-01-argocd.yaml
 oc apply -f demo-01-argocd.yaml
-oc get all -n simon01-argocd
+oc get all -n fitam01-argocd
 
-oc new-project simon01-project
-oc label namespace simon01-project argocd.argoproj.io/managed-by=simon01-argocd
+oc new-project fitam01-project
+oc label namespace fitam01-project argocd.argoproj.io/managed-by=fitam01-argocd
 
 vim demo-01-application.yaml
-oc apply -f demo-01-application.yaml -n simon01-argocd
+oc apply -f demo-01-application.yaml -n fitam01-argocd

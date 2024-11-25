@@ -4,12 +4,12 @@ metadata:
   name: echoenv-app
 spec:
   destination:
-    namespace: simon01-project
+    namespace: fitam01-project
     server: https://kubernetes.default.svc 
   project: default 
   source: 
     path: demo-01/manifests
-    repoURL: https://github.com/simonkrenger/gitops-basics-demos.git
+    repoURL: https://github.com/przlod/gitops-basics-demos.git
     targetRevision: main
   syncPolicy: 
     automated:
