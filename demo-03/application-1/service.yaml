@@ -1,16 +1,18 @@
 ---
-apiVersion: route.openshift.io/v1
-kind: Route
+apiVersion: v1
+kind: Service
 metadata:
   labels:
-    app: echoenv
-  name: echoenv
+    app: nginx
+  name: nginx
 spec:
-  port:
-    targetPort: 8080-tcp
-  to:
-    kind: Service
-    name: echoenv
-    weight: 100
-  wildcardPolicy: None
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: nginx
+  sessionAffinity: None
+  type: ClusterIP
 

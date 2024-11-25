@@ -8,7 +8,7 @@ spec:
     namespace: application-1
     server: "https://kubernetes.default.svc"
   source:
-    repoURL: "https://github.com/simonkrenger/gitops-basics-demos.git"
+    repoURL: "https://github.com/przlod/gitops-basics-demos.git"
     path: "demo-03/application-1/"
     targetRevision: HEAD
   project: default

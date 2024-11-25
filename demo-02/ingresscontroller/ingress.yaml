@@ -4,9 +4,4 @@ kind: Ingress
 metadata:
   name: cluster
 spec:
-  domain: apps.skrenger-gitops.sandbox810.opentlc.com
-  loadBalancer:
-    platform:
-      aws:
-        type: Classic
-      type: AWS
+  domain: apps.ocp-lab.lodyga.net
