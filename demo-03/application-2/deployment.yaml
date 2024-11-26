@@ -21,7 +21,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: registry.redhat.io/ubi9/nginx-124@sha256:8870b07b39166e44325116bde4f3701e8fbd5cd328e0e719310529b8e7e122e2
+      - image: quay.io/rhn_support_plodyga/versioned-hello@sha256:834d5eb861cf528ff77388cd99132c426bcaea41d660048191c88e7c0a08fcb4
         name: nginx
         ports:
         - containerPort: 8080
